@@ -143,11 +143,17 @@ const Header = () => {
               className="bg-white/80 top-0 right-0 bottom-0 left-0 fixed z-[45] "
             ></motion.div>
             <RxCross2
-              className="fixed z-[60] cursor-pointer text-black top-5 right-5"
+              className="fixed z-[60] cursor-pointer text-black top-10 right-10"
               size={30}
               onClick={() => setShowSearch(false)}
             />
-            <div className="fixed z-[50] top-0 w-full h-full flex items-center justify-center">
+            <motion.div
+              initial={{ rotate: 300, scale: 0, opacity: 0 }}
+              animate={{ rotate: 0, scale: 1, opacity: 1 }}
+              exit={{ rotate: 300, scale: 0, opacity: 0 }}
+              transition={{ duration: 0.5, type: "tween" }}
+              className="fixed z-[50] top-0 w-full h-full flex items-center justify-center"
+            >
               <motion.input
                 initial={{ rotate: 300, scale: 0, opacity: 0 }}
                 animate={{ rotate: 0, scale: 1, opacity: 1 }}
@@ -160,7 +166,7 @@ const Header = () => {
               <div className="absolute sm:right-1/4 right-3 text-mygray">
                 <LuSearch size={25} className="" />
               </div>
-            </div>
+            </motion.div>
           </>
         )}
       </AnimatePresence>
