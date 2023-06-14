@@ -6,7 +6,7 @@ import { RxCross2 } from "react-icons/rx";
 
 const Header = () => {
   const [Show, setShow] = useState(false);
-  const [ShowSearch, setShowSearch] = useState(true);
+  const [ShowSearch, setShowSearch] = useState(false);
   return (
     <>
       <nav className="fixed top-0 z-40 border-b-[1px] w-full text-myblack bg-white border-gray-200">
